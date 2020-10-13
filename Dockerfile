@@ -3,7 +3,7 @@ FROM python:3.6-stretch
 
 MAINTAINER wenchi0920@gmail.com
 
-ENV VER=2.0.0
+ENV VER=2.0.1
 ENV TZ=Asia/Taipei
 ENV DEBIAN_FRONTEND=noninteractive
 
