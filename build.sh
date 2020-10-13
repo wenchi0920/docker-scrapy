@@ -13,4 +13,7 @@ do
     git tag -f "${tag}"
 done
 
+git push origin master
+git push -f --tag
+
 
