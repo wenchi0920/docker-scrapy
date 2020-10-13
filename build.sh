@@ -10,10 +10,12 @@ do
     echo "${tag}"
     cat "${dname}/Dockerfile.sample" | sed "s/{{VER}}/$tag/" > "${dname}/Dockerfile"
     git commit "${dname}/Dockerfile" -m "version ${tag}"
-    git tag -f "${tag}"
+    git tag -d "${tag}"
+    git push origin ":${tag}"
+    git tag "${tag}"
+    git push origin master
+    git push --tag
 done
 
-git push origin master
-git push -f --tag
 
 
